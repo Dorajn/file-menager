@@ -17,6 +17,10 @@ for i in range(len(ingredients) - 1):
 
 h_table = {}
 for file_name in os.listdir(path):
+
+    if not os.path.isfile(path + "\\" + file_name):
+        continue
+
     extenstion = file_name.split(".")[1]
 
     if extenstion not in h_table:
